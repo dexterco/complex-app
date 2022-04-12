@@ -49,7 +49,7 @@ export default class Search {
       console.log(response.data)
       this.renderResultsHTML(response.data)
     }).catch(() => {
-      alert("Request failed")
+      this.resultArea.innerHTML = `<p class="alert alert-danger text-center shadow-sm">Something went wrong  please try again later</p>`
     })
   }
 

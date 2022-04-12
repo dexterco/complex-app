@@ -8,10 +8,10 @@
   
     <div class="list-group">
     <% 
-    posts.forEach(function(post){%>
-      <a href="/post/<%=post._id%>" class="list-group-item list-group-item-action">
-        <img class="avatar-tiny" src="<%=post.author.avatar%>"> 
-        <strong><%=post.title%></strong> on <%=post.date.getDate()%>/<%=post.date.getMonth()+1%>/<%=post.date.getFullYear()%>
+    following.forEach(function(followedUser){%>
+      <a href="/profile/<%= followedUser.username %>" class="list-group-item list-group-item-action">
+        <img class="avatar-tiny" src="<%=followedUser.avatar%>"> 
+        <%= followedUser.username %>
       </a>
     <%})%>
     </div>
